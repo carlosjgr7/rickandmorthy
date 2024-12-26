@@ -8,7 +8,7 @@ import org.carlosjgr7.project.data.remote.response.SingleCharacter
 class ApiService (private val client: HttpClient){
     suspend fun getSingleCharacter(id: Int): SingleCharacter {
         return client.get("/api/character/$id")
-            .body<SingleCharacter>()
+            .body()
     }
 }
 

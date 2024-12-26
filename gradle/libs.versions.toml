@@ -19,6 +19,7 @@ koin = "3.5.6"
 koinCompose = "1.1.5"
 koinComposeViewmodel = "1.2.0-Beta4"
 ktor="2.3.12"
+viewmodel = "2.8.7"
 
 
 
@@ -50,6 +51,10 @@ ktor-client-serialization = { group = "io.ktor", name = "ktor-serialization-kotl
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-drawin = { group = "io.ktor", name = "ktor-client-drawin", version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version = "ktor" }
+
+
+#Viewmodel
+viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel" }
 
 
 [plugins]

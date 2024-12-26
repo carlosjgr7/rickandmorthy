@@ -3,6 +3,7 @@ package org.carlosjgr7.project.data.remote.response
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import org.carlosjgr7.project.domain.model.SingleCharacterModel
 
 @Serializable
 data class SingleCharacter(
@@ -30,4 +31,12 @@ data class SingleCharacter(
     val type: String,
     @SerialName("url")
     val url: String
-)
+) {
+    fun toDomain(): SingleCharacterModel {
+        return SingleCharacterModel(
+            id = id.toString(),
+            isAlive = status.lowercase() == "alive",
+            image = image,
+        )
+    }
+}
