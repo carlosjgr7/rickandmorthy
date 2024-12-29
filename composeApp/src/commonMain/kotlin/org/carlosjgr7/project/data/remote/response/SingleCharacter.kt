@@ -37,6 +37,7 @@ data class SingleCharacter(
             id = id.toString(),
             isAlive = status.lowercase() == "alive",
             image = image,
+            name = name
         )
     }
 }

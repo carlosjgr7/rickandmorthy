@@ -19,7 +19,10 @@ koin = "3.5.6"
 koinCompose = "1.1.5"
 koinComposeViewmodel = "1.2.0-Beta4"
 ktor="2.3.12"
-viewmodel = "2.8.7"
+viewmodel = "2.8.0"
+coil = "3.0.0-alpha08"
+pagingComposeCommon = "3.3.0-alpha02-0.4.0"
+
 
 
 
@@ -49,13 +52,20 @@ ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref =
 ktor-client-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
-ktor-client-drawin = { group = "io.ktor", name = "ktor-client-drawin", version.ref = "ktor" }
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version = "ktor" }
 
 
 #Viewmodel
-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel" }
+viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel" }
 
+#Coil
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-ktor = { group = "io.coil-kt.coil3", name = "coil-network-ktor", version.ref = "coil" }
+
+#Paginacion
+paging-common = { group = "app.cash.paging", name = "paging-common", version.ref = "pagingComposeCommon" }
+paging-compose = { group = "app.cash.paging", name = "paging-compose-common", version.ref = "pagingComposeCommon" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -10,12 +10,15 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.carlosjgr7.project.domain.GetRamdomCharacter
+import org.carlosjgr7.project.domain.Repository
 import org.carlosjgr7.project.domain.model.SingleCharacterModel
 
-class CharactersViewModel(val getramdomCharacter: GetRamdomCharacter) : ViewModel() {
+class CharactersViewModel(val getramdomCharacter: GetRamdomCharacter, private val repository: Repository) : ViewModel() {
 
     private val _state = MutableStateFlow(CharacterState())
     val state: StateFlow<CharacterState> = _state
+
+
 
     init {
         viewModelScope.launch {
@@ -24,6 +27,11 @@ class CharactersViewModel(val getramdomCharacter: GetRamdomCharacter) : ViewMode
             }
             _state.update {state -> state.copy(characterOfTheDay = result) }
         }
+        getAllCharacters()
+    }
+
+    private fun getAllCharacters() {
+        _state.update { state -> state.copy(characters = repository.getAllCharacters()) }
     }
 
 

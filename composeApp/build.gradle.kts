@@ -59,9 +59,17 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.negotiation)
             implementation(libs.ktor.client.serialization)
+
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
+
+            implementation(libs.paging.common)
+            implementation(libs.paging.compose)
+
+
         }
         iosMain.dependencies{
-            implementation(libs.ktor.client.drawin)
+            implementation(libs.ktor.client.darwin)
         }
     }
 }

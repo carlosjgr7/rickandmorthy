@@ -4,4 +4,5 @@ data class SingleCharacterModel(
     val id: String,
     val isAlive:Boolean,
     val image: String,
+    val name: String,
 )
