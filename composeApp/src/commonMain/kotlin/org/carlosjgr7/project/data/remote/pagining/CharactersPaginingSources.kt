@@ -1,7 +1,6 @@
 package org.carlosjgr7.project.data.remote.pagining
 
 import org.carlosjgr7.project.data.remote.ApiService
-import org.carlosjgr7.project.data.remote.response.SingleCharacter
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import io.ktor.utils.io.errors.IOException
