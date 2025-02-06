@@ -2,6 +2,7 @@ package org.carlosjgr7.project.ui.home.characters
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.cachedIn
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,7 +32,7 @@ class CharactersViewModel(val getramdomCharacter: GetRamdomCharacter, private va
     }
 
     private fun getAllCharacters() {
-        _state.update { state -> state.copy(characters = repository.getAllCharacters()) }
+        _state.update { state -> state.copy(characters = repository.getAllCharacters().cachedIn(viewModelScope)) }
     }
 
 

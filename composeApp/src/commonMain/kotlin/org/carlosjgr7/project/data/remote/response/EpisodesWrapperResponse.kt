@@ -2,8 +2,9 @@ package org.carlosjgr7.project.data.remote.response
 
 import kotlinx.serialization.Serializable
 
+
 @Serializable
-data class CharactersWrapperResponse(
+data class EpisodesWrapperResponse(
     val info: InfoResponse,
-    val results: List<SingleCharacter>
+    val results: List<EpisodeResponse>
 )
