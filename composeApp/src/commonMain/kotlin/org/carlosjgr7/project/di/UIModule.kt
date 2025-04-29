@@ -8,6 +8,4 @@ import org.koin.dsl.module
 val uiModule = module{
     viewModelOf(::EpisodesViewmodel)
     viewModelOf(::CharactersViewModel)
-
-
 }

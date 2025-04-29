@@ -10,6 +10,7 @@ import kotlinx.serialization.json.Json
 import org.carlosjgr7.project.data.RepositoryImpl
 import org.carlosjgr7.project.data.remote.ApiService
 import org.carlosjgr7.project.data.remote.pagining.CharactersPaginingSources
+import org.carlosjgr7.project.data.remote.pagining.EpisodesPaginingSources
 import org.carlosjgr7.project.domain.Repository
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.factoryOf
@@ -31,10 +32,8 @@ val dataModule = module {
             }
         }
     }
-//    factory { ApiService(get()) }
     factoryOf(::ApiService)
-//    factory<Repository> { RepositoryImpl(get()) }
     factoryOf(::RepositoryImpl) { bind<Repository>() }
-
     factoryOf(::CharactersPaginingSources)
+    factoryOf(::EpisodesPaginingSources)
 }
